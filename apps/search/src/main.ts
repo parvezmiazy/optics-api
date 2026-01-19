@@ -6,7 +6,6 @@ import { Logger } from '@nestjs/common';
 async function bootstrap() {
   process.title = 'Search Service';
   const logger = new Logger('Search Bootstrap');
-  const port = Number(process.env.SEARCH_TCP_PORT ?? 4012);
  const rmqUrl = process.env.RABBITMQ_URL ?? 'amqp://localhost:5672';
 
   const queue = process.env.SEARCH_QUEUE ?? 'search_queue';

@@ -6,7 +6,6 @@ import { Logger } from '@nestjs/common';
 async function bootstrap() {
   process.title = 'Media Service';
   const logger = new Logger('MediaBootstrap');
-  const port = Number(process.env.MEDIA_TCP_PORT ?? 4011);
   const rmqUrl = process.env.RABBITMQ_URL ?? 'amqp://localhost:5672';
 
   const queue = process.env.MEDIA_QUEUE ?? 'media_queue';

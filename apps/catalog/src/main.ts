@@ -17,7 +17,7 @@ async function bootstrap() {
         urls: [rmqUrl],
         queue,
         queueOptions: {
-          durable: true,
+          durable: false,
        
         },
       
